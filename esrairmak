@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner deger = new Scanner(System.in);
+        System.out.print("Ödenen Tutar : ");
+        double tutar = deger.nextDouble();
+        		int kdv = (tutar >= 1000)? 8 : 18;
+        System.out.println("KDV oranı:" + kdv+"%");
+	        double tutarKdv = ((tutar*kdv)/100);
+	        double kdvsizTutar = ((tutar - tutarKdv));
+        System.out.println("KDV'siz tutar: " + kdvsizTutar);
+        System.out.println("KDV tutarı: " + tutarKdv);
+        System.out.println("KDV'li tutar: " + (kdvsizTutar + tutarKdv) );
+
+    } }
